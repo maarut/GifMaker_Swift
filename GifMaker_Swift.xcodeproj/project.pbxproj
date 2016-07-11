@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31DDC2E1D3008A400A4DEF0 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31DDC2D1D3008A400A4DEF0 /* Gif.swift */; };
+		E3305A541D2FBF1A00615AE0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3305A531D2FBF1A00615AE0 /* UIViewController+Extensions.swift */; };
+		E3305A571D2FC55C00615AE0 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3305A561D2FC55C00615AE0 /* UIImage+Gif.swift */; };
+		E394DFBC1D2FB221006E283A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E394DFBB1D2FB221006E283A /* WelcomeViewController.swift */; };
+		E394DFBE1D2FB2CC006E283A /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E394DFBD1D2FB2CC006E283A /* GifEditorViewController.swift */; };
+		E394DFC01D2FB2E8006E283A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E394DFBF1D2FB2E8006E283A /* PreviewViewController.swift */; };
 		EDDFC4DC1CE261A600A586CA /* tinaFeyHiFive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */; };
 		EDDFC4DE1CE261C400A586CA /* hotlineBling.gif in Resources */ = {isa = PBXBuildFile; fileRef = EDDFC4DD1CE261C400A586CA /* hotlineBling.gif */; };
 		EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E31DDC2D1D3008A400A4DEF0 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		E3305A531D2FBF1A00615AE0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E3305A561D2FC55C00615AE0 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		E394DFBB1D2FB221006E283A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E394DFBD1D2FB2CC006E283A /* GifEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
+		E394DFBF1D2FB2E8006E283A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tinaFeyHiFive.gif; sourceTree = "<group>"; };
 		EDDFC4DD1CE261C400A586CA /* hotlineBling.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hotlineBling.gif; sourceTree = "<group>"; };
 		EDFAA8E91CDA99A500D2CB08 /* GifMaker_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifMaker_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +75,33 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		E31DDC2C1D30088E00A4DEF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E31DDC2D1D3008A400A4DEF0 /* Gif.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E3305A551D2FC52400615AE0 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				E3305A561D2FC55C00615AE0 /* UIImage+Gif.swift */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		E394DFBA1D2FB1F9006E283A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E394DFBB1D2FB221006E283A /* WelcomeViewController.swift */,
+				E394DFBD1D2FB2CC006E283A /* GifEditorViewController.swift */,
+				E394DFBF1D2FB2E8006E283A /* PreviewViewController.swift */,
+				E3305A531D2FBF1A00615AE0 /* UIViewController+Extensions.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		EDFAA8E01CDA99A500D2CB08 = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +121,14 @@
 		EDFAA8EB1CDA99A500D2CB08 /* GifMaker_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E31DDC2C1D30088E00A4DEF0 /* Model */,
+				E3305A551D2FC52400615AE0 /* Third Party */,
+				E394DFBA1D2FB1F9006E283A /* View Controllers */,
 				EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */,
 				A94CC3D71D21C85A00DC758E /* Assets */,
 				A94CC3D61D21C84C00DC758E /* Supporting Files */,
 				EDFAA9221CDA9C4700D2CB08 /* Regift files */,
 			);
-			name = GifMaker_Swift;
 			path = GifMaker_Swift;
 			sourceTree = "<group>";
 		};
@@ -133,6 +174,7 @@
 				TargetAttributes = {
 					EDFAA8E81CDA99A500D2CB08 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F53K8XZ6AA;
 					};
 				};
 			};
@@ -175,6 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,
+				E394DFBC1D2FB221006E283A /* WelcomeViewController.swift in Sources */,
+				E394DFC01D2FB2E8006E283A /* PreviewViewController.swift in Sources */,
+				E3305A571D2FC55C00615AE0 /* UIImage+Gif.swift in Sources */,
+				E31DDC2E1D3008A400A4DEF0 /* Gif.swift in Sources */,
+				E394DFBE1D2FB2CC006E283A /* GifEditorViewController.swift in Sources */,
+				E3305A541D2FBF1A00615AE0 /* UIViewController+Extensions.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
 				EDFAA91F1CDA9C3100D2CB08 /* AVAssetImageGeneratorTimePoints.swift in Sources */,
@@ -282,10 +330,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GifMaker_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Udacity.GifMaker-Swift";
 				PRODUCT_NAME = GifMaker_Swift;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -293,10 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GifMaker_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Udacity.GifMaker-Swift";
 				PRODUCT_NAME = GifMaker_Swift;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
