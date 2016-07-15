@@ -53,6 +53,8 @@ class GifEditorViewController: UIViewController
         let nextVC = storyboard?.instantiateViewControllerWithIdentifier("PreviewViewController")
             as! PreviewViewController
         nextVC.gif = gif
+        nextVC.delegate = navigationController?.viewControllers.last { $0 is PreviewViewControllerDelegate }
+            as? PreviewViewControllerDelegate
         navigationController?.pushViewController(nextVC, animated: true)
         
     }
@@ -116,5 +118,16 @@ extension GifEditorViewController
     func dismissKeyboard(gestureRecogniser: UITapGestureRecognizer)
     {
         caption.endEditing(true)
+    }
+}
+
+private extension Array
+{
+    func last(@noescape comparator: Element -> Bool) -> Element?
+    {
+        for element in reverse() {
+            if comparator(element) { return element }
+        }
+        return nil
     }
 }
