@@ -11,9 +11,26 @@ import UIKit
 class SavedGifsViewController: UIViewController
 {
     var gifs = [Gif]()
+    lazy var gifURL: String = {
+        let documentsDirs = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        if let documentDir = documentsDirs.first {
+            return (documentDir as NSString).stringByAppendingPathComponent("savedGifs")
+        }
+        else {
+            fatalError("Couldn't find document directory.")
+        }
+    }()
     
     @IBOutlet weak var emptyCollectionPlaceholderView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        if let gifs = NSKeyedUnarchiver.unarchiveObjectWithFile(gifURL) as? [Gif] {
+            self.gifs = gifs
+        }
+    }
     
     override func viewWillAppear(animated: Bool)
     {
@@ -71,6 +88,7 @@ extension SavedGifsViewController: PreviewViewControllerDelegate
         if let url = gif.pathToGIF {
             gif.gifData = NSData(contentsOfURL: url)
             gifs.append(gif)
+            NSKeyedArchiver.archiveRootObject(gifs, toFile: gifURL)
         }
     }
 }
