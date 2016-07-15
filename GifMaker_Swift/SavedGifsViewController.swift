@@ -30,6 +30,11 @@ class SavedGifsViewController: UIViewController
         if let gifs = NSKeyedUnarchiver.unarchiveObjectWithFile(gifURL) as? [Gif] {
             self.gifs = gifs
         }
+        if !NSUserDefaults.standardUserDefaults().boolForKey("WelcomeViewSeen") {
+            if let welcomeVC = storyboard?.instantiateViewControllerWithIdentifier("WelcomeViewController") {
+                navigationController?.pushViewController(welcomeVC, animated: true)
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool)

@@ -27,8 +27,8 @@ class DetailViewController: UIViewController
     
     @IBAction func share(sender: AnyObject)
     {
-        if let gif = gif {
-            let shareController = UIActivityViewController(activityItems: [gif], applicationActivities: nil)
+        if let gifData = gif?.gifData {
+            let shareController = UIActivityViewController(activityItems: [gifData], applicationActivities: nil)
             shareController.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in
                 if completed { self.dismissViewControllerAnimated(true, completion: nil) }
             }

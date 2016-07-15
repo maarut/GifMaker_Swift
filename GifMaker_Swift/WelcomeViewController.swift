@@ -16,6 +16,7 @@ class WelcomeViewController: UIViewController {
         super.viewWillAppear(animated)
         let pocGif = UIImage.gifWithName("hotlineBling")
         gifImageView.image = pocGif
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "WelcomeViewSeen")
     }
     
     override func didReceiveMemoryWarning()
